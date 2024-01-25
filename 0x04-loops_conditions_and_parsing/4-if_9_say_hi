@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script is displaying "Best School" for ten times using 'while' loop.
+#This script is displaying "Best School" for ten times using 'while' loop if 'i' equals 9 echo Hi.
 i="0"
 while [ $i -lt 10 ];do
 	echo "Best School"

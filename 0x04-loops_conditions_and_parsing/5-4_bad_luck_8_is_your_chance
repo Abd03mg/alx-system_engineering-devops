@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This script is displaying "Best School" for ten times using 'while' loop.
+#This script is displaying it is good or bad luck.
 i="1"
 while [ $i -le 10 ];do
 	if [ $i = "4" ]
