@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#This script is displaying the name field of "ls -l" command.
+lis=$(ls)
+for i in $lis;do
+	 echo "$i" | cut -d '-' -f 2
+done
