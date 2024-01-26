@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This script displays the pid of any bash process without using 'ps'command.
+for i in $(pgrep bash);do
+	echo "$i bash"
+done
