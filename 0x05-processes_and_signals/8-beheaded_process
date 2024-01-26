@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#This script kills indefinitly script with out using 'kill' command.
+pkill -9 -f 7-highlander
