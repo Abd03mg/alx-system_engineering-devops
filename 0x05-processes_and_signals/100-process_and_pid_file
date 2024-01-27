@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#this script do:
+#	create file with its pid.
+#	displays text indefinitly
+#	displays deffrent texts due to specific signal.
+delet(){
+	rm /var/run/myscript.pid
+	exit
+}
+while :;do
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'echo "Y U no love me?!"' SIGINT
+	trap 'echo "I hate the kill command" && terminator' SIGTERM
+	trap 'delet' SIGQUITgit
+done
