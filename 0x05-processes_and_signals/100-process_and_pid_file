@@ -7,6 +7,7 @@ delet(){
 	rm /var/run/myscript.pid
 	exit
 }
+echo "$$" > /var/run/myscript.pid
 while :;do
 	echo "To infinity and beyond"
 	sleep 2
