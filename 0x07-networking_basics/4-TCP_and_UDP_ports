@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#This script is displaying sockets and the processes/programs that belong to it.
+netstat -pw
