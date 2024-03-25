@@ -2,5 +2,7 @@
 
 file{'/etc/ssh/ssh_config':
 ensure  => present,
-content => 'IdentityFile ~/.ssh/school \nPasswordAuthentication no \n'
+#path    => '/etc/ssh/ssh_config',
+content => 'IdentityFile ~/.ssh/school
+PasswordAuthentication no'
 }
