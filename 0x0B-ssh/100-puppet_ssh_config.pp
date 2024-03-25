@@ -1,6 +1,6 @@
 #puppet configuration file
 
 file{'/etc/ssh/ssh_config':
-ensure  => present
+ensure  => present,
 content => 'IdentityFile ~/.ssh/school \nPasswordAuthentication no \n'
 }
