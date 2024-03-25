@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Script that make passwordless SSH connection with specific private key.
+
+ssh -i ~/.ssh/school ubuntu@18.209.179.152
