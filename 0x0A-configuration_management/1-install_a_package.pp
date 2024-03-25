@@ -1,6 +1,6 @@
 #Install Package
 
-package { ['Werkzeug', 'flask==2.1.0']:
-  ensure   => 'installed',
+package {'flask':
+  ensure   => '2.1.0',
   provider => 'pip3',
 }
