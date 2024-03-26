@@ -4,5 +4,5 @@ apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me hhtps:\/\/twitter.com\/Abd0_3mg permanent;/" /etc/nginx/sites-available/default
-sudo /etc/init.d/nginx restart
-sudo service nginx start
+#sudo /etc/init.d/nginx restart
+sudo service nginx reload
