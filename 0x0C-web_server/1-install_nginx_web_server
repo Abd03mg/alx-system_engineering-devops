@@ -5,3 +5,4 @@ apt-get -y install nginx
 sed -i 's/8000/80/g' /etc/nginx/sites-enabled/default
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 sudo /etc/init.d/nginxs restart
+sudo service nginx start
