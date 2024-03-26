@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Script that install and configure nginx web server.
+apt-get -y update
+apt-get -y install nginx
+sed -i 's/8000/80/g' /etc/nginx/sites-enabled/default
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+printf "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+
+    location /redirect_me {
+        return 301 https://twitter.com/Abd0_3mg;
+    }
+}" > /etc/nginx/sites-available/default
+sudo /etc/init.d/nginxs restart
+sudo service nginx start
