@@ -2,7 +2,6 @@
 #Script that install and configure nginx web server.
 apt-get -y update
 apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sed -i "s/server_name _;/server_name _;\n\tlocation \/redirect_me {\n\t\treturn 301 https:\/\/twitter.com\/Abd0_3mg\/;/" /etc/nginx/sites-available/default
-#sudo /etc/init.d/nginx restart
-sudo service nginx start
+echo "Hello World!" | sudo tee /var/www/html/index.html > /dev/null
+sed -i "46i rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
+service nginx restart
