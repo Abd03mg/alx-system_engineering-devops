@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Script that configures th HAPROXY.
+
+apt-get -y update
+add-apt-repository -y ppa:vbernat/haproxy-2.8
+apt-get -y instal haproxy=2.8\*
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.org
+echo -e "\nfrontend hapro\n\tbind *:80\n\tmode http\n\tdefault_backend ser\n\nbackend ser\n\tbalance roundrobin\n\tserver web-01 18.209.179.152:80 check\n\tserver web-02 3.86.13.133:80 check\n" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
