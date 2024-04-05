@@ -2,4 +2,4 @@
 #Script that configures nginx to listen to port 80;
 sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 service nginx restart
-pkill -f nginx
+pgrep nginx | xargs kill -9
